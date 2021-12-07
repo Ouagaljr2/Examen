@@ -1,0 +1,10 @@
+#comments {
+    display: flex;
+    grid-gap: 50px;
+}
+
+#comments article {
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+}

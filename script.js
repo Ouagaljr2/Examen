@@ -2,7 +2,7 @@ let section = document.getElementById('comments');
 
 document.getElementById("voir")
         .addEventListener('click', () => {
-          fetch('http://localhost:8000/api.php')
+          fetch('/api.php')
             .then((response) => {
                 response.json()
                         .then((comment) => {
@@ -26,9 +26,7 @@ document.getElementById("voir")
                             }) 
                       
                         })
-                        .catch((error) => {
-                          console.log(error)
-                        })
+                     
               
             })
             .catch((error) => {

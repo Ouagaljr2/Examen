@@ -19,8 +19,11 @@ button{
 }
 
 
-@media screen and (max-width: 1640px){
+@media screen and (max-width: 1080){
 
     
 }
-@media screen and (max-width: 1640px){}
+
+@media screen and (max-width: 800){
+
+}

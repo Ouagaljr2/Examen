@@ -8,7 +8,7 @@ try {
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // j'ai supprimer cla partie creation de la table
 
-    $comment = $pdo->query('SELECT * FROM comment')
+    $comment = $pdo->query('SELECT content FROM comment')
                    ->fetchAll();
 
     echo json_decode($comment);

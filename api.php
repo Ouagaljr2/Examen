@@ -3,15 +3,10 @@
 // fichier appelé par l'appel AJAX pour charger les commentaires dans le fichier principal
 
 try {
-    $pdo = new PDO('mysql:monserveur');
+    $pdo = new PDO('sqlite:' . dirname(__FILE__) . '/database.db');
     $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    $pdo->query('CREATE TABLE IF NOT EXISTS comment (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    username VARCHAR(150) NOT NULL,
-    content TEXT NOT NULL
-)');
+    // j'ai supprimer cla partie creation de la table
 
     $comment = $pdo->query('SELECT * FROM comment')
                    ->fetchAll();
@@ -20,3 +15,5 @@ try {
 } catch (Exception $exception) {
     var_dump($exception->getMessage());
 }
+
+

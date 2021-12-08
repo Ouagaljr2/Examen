@@ -2,19 +2,30 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css"/>
-    <script src="script.js"></script>
 </head>
 <body>
-<nav>
-    <form>
-        <input type="text">
-        <input type="text">
-        <input type="submit" value="Valider">
-    </form>
+    <div>
+        <form action="form.php" method="post" >
 
-    <input type="button" value="Lire les commentaire"/>
+            <div>
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" placeholder="Votre nom">
+            </div>
 
-    <div id="comments"></div>
-</nav>
+            <div>
+                <label for="content"></label>
+                <textarea name="content" id="content"> votre commentaire</textarea>
+            </div>
+
+            <button type= "submit" > Valider </button>
+        </form>
+
+        <button id="voir"> Lire les commentaire </button>
+        <div id="comments"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
